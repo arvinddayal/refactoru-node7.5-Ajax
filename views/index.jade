@@ -1,4 +1,10 @@
 extends layout
 
 block content
-	button#my-button Load Countries
+	.search
+		form(action="/search", method="get")
+			input(type="text" name="search" placeholder="Search")
+			input(type="submit")#search
+	.countries
+		button#my-button Load Countries
+	.country-display
